@@ -1,0 +1,56 @@
+// INCOMPLETO
+
+#include<iostream>
+
+using namespace std;
+
+void inserire(int a[], int n) {
+	for (int i = 0; i < n; i++) {
+		cout << "inserire gli ementi nell'array";
+		cin >> a[i];
+	}
+}
+
+void stampa(int a[], int n) {
+	for (int i = 0; i < n; i++) {
+		cout << a[i] << "";
+		cout << endl;
+	}
+}
+
+void concatena(int a[], int b[], int c[], int n) {
+
+		int* puntatore;
+		int c[2 * n];
+
+		for (int i = 0; i < n; i++) {
+			c[i] = a[i];
+			c[n + i] = b[i];
+		}
+		puntatore = c;
+				cout << "vettore ottenuto dopo la concatenazione";
+				stampa(puntatore, 2 * n);
+				return puntatore;
+			}
+
+int main() {
+	int a[6];
+	int b[6];
+	int* c;
+
+	cout << "Creazione del vettore a:\n";
+	inserire(a, 6);
+	cout << "Vettore a;\n";
+	stampa(a, 6);
+	cout << "Creazione del vettore b:\n";
+	inserire(b, 6);
+	cout << "Vettore b;\n";
+	stampa(b, 6);
+	concatena(a, b, c, 6);
+	cout << "Vettore ottenuto dopo la concatenazione:\n";
+	stampa(c, 12);
+	
+	return 0;
+}
+
+
